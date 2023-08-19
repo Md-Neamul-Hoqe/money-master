@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Master | Manage your budgets</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+  <!-- Tailwind & Daisy UI CDN link -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" /> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Customised Utilities -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "ema-dip-black": "#1C2B35",
+            "ema-black": "#0E161A",
+            "ema-orange": "#FF9900",
+            "ema-gold": "#FFE0B3",
+            "ema-red": "#FF3030",
+            "ema-light-red": "#EB5757",
+            "ema-gray": "#95A0A7",
+            "ema-light-blue": "#2A414F",
+          },
+          dropShadow: {
+            '2xl': '-12px 12px 0px #FFE0B3',
+          }
+        },
+        fontFamily: {
+          'montserrat': ['montserrat', 'sans'],
+          'roboto': ['Roboto', 'sans'],
+        },
+
+        container: {
+          center: true,
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-roboto text-lg px-16">
+  <!-- <header><h1>Money Master💰<i class="fa-solid fa-sack-dollar text-yellow-500"></i></h1></header> -->
+  <header>
+    <h1 class="text-5xl font-montserrat text-center text-[#31A5AC] font-bold py-9">Money Master💰</h1>
+  </header>
+  <main class="grid grid-cols-2 gap-20 mb-20">
+    <aside class=""><img src="./images/dollarCalculation.png" alt="left side image"></aside>
+    <aside class="p-10 bg-gray-100">
+      <form action="" class="flex flex-col items-center">
+        <h4 class="text-[22px] font-bold">Income</h4>
+        <div class="flex items-center justify-end w-11/12 my-7">
+          <label for="income">Income:</label><input class="border p-3 my-3 mx-2" min="0" type="number" name="income"
+            id="income" placeholder="Income...">
+        </div>
+        <h4 class="text-[22px] font-bold">Expenses</h4>
+        <div class="flex items-center justify-end w-11/12">
+          <label for="food">Food:</label><input class="border w56 p-3 my-3 mx-2" min="0" type="number" name="food"
+            id="food" placeholder="For Food...">
+        </div>
+        <div class="flex items-center justify-end w-11/12">
+          <label for="Rent">Rent:</label><input class="border w56 p-3 my-3 mx-2" min="0" type="number" name="Rent"
+            id="Rent" placeholder="For Rent...">
+        </div>
+        <div class="flex items-center justify-end w-11/12">
+          <label for="Clothes">Clothes:</label><input class="border w56 p-3 my-3 mx-2" min="0" type="number"
+            name="Clothes" id="Clothes" placeholder="For Clothes...">
+        </div>
+        <button id="budgetCalcBtn"
+          class="rounded bg-blue-400 hover:bg-blue-400/95 text-white px-12 py-3 my-3 font-bold text-xl"
+          type="button">Calculate</button>
+      </form>
+      <div class="flex flex-col items-center py-4 gap-5 font-bold">
+        <h4 class="text-[22px] font-bold">Total Expenses: <span id="totalExpenses"></span></h4>
+        <h4 class="text-[22px] font-bold">Balance: <span id="balance"></span></h4>
+        <div class="flex items-center justify-between w-full">
+          <label for="save">Save:</label>
+          <input class="bg-gray-200 text-center rounded-sm w-32 py-2" min="0" type="number" name="save" id="save"
+            placeholder="save..."><span>%</span>
+          <button id="saveBtn" class="rounded-sm bg-blue-400 hover:bg-blue-400/95 text-white px-12 py-2 font-bold text-xl"
+            type="button">Save</button>
+        </div>
+        <h4 class="text-[22px] font-bold">Saving Amount: <span id="savingAmount"></span></h4>
+        <h4 class="text-[22px] font-bold">Remaining Balance: <span id="remainingBalance"></span></h4>
+      </div>
+    </aside>
+  </main>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
