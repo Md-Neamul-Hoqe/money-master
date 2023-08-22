@@ -9,7 +9,7 @@
   <!-- Tailwind CDN link -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Customised Utilities -->
+  <!-- Customized Utilities -->
   <script>
     tailwind.config = {
       theme: {
@@ -63,8 +63,8 @@
           type="button">Calculate</button>
       </form>
       <div class="flex flex-col items-center py-4 gap-5 font-bold">
-        <h4 class="text-[22px] font-bold">Total Expenses: <span id="totalExpenses"></span></h4>
-        <h4 class="text-[22px] font-bold">Balance: <span id="balance"></span></h4>
+        <h4 class="text-[22px] font-bold">Total Expenses: $<span id="totalExpenses">0</span></h4>
+        <h4 class="text-[22px] font-bold">Balance: $<span id="balance">0</span></h4>
         <div class="flex items-center justify-between w-full">
           <label for="save">Save:</label>
           <input class="bg-gray-200 text-center rounded-sm w-32 py-2" min="0" type="number" name="save" id="save"
@@ -72,8 +72,8 @@
           <button id="saveBtn" class="rounded-sm bg-blue-400 hover:bg-blue-400/95 text-white px-12 py-2 font-bold text-xl"
             type="button">Save</button>
         </div>
-        <h4 class="text-[22px] font-bold">Saving Amount: <span id="savingAmount"></span></h4>
-        <h4 class="text-[22px] font-bold">Remaining Balance: <span id="remainingBalance"></span></h4>
+        <h4 class="text-[22px] font-bold">Saving Amount: $<span id="savingAmount">0</span></h4>
+        <h4 class="text-[22px] font-bold">Remaining Balance: $<span id="remainingBalance">0</span></h4>
       </div>
     </aside>
   </main>
